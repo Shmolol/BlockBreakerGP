@@ -27,12 +27,18 @@ public class Ball extends Actor {
 
     private void checkCollision() {
         Actor brick = getOneIntersectingObject(Brick.class);
+<<<<<<< HEAD
         Actor powerUpBlue = getOneIntersectingObject(PowerUpBlue.class);
         if (brick != null) {
             getWorld().removeObject(brick);
             getWorld().removeObject(powerUpBlue);
             dy = -dy;
             Greenfoot.playSound("pop1.wav");
+=======
+        if (brick != null) {
+            getWorld().removeObject(brick);
+            dy = -dy;
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
         }
         if (getX() <= 0 || getX() >= getWorld().getWidth() - 1) {
             dx = -dx;
@@ -50,7 +56,10 @@ public class Ball extends Actor {
             dx = (ballCenterX - platformCenterX) / 5;
             dy = -dy;
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
     }
 }
 

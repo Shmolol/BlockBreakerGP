@@ -3,6 +3,7 @@ class.Ball.image=White-Ball-Transparent-PNG.png
 class.Brick.image=Bricks.png
 class.Level1World.image=Level1World.png
 class.Platform.image=Platform.png
+<<<<<<< HEAD
 class.PowerUpBlue.image=PowerUpBlue.png
 class.YouWon1World.image=YouWon1.jpg
 class.gameEndWorld.image=brick.jpg
@@ -48,13 +49,47 @@ dependency8.type=UsesDependency
 dependency9.from=MyWorld
 dependency9.to=Brick
 dependency9.type=UsesDependency
+=======
+class.YouWon1World.image=YouWon1.jpg
+class.gameEndWorld.image=brick.jpg
+dependency1.from=gameEndWorld
+dependency1.to=Ball
+dependency1.type=UsesDependency
+dependency2.from=gameEndWorld
+dependency2.to=Brick
+dependency2.type=UsesDependency
+dependency3.from=MyWorld
+dependency3.to=Platform
+dependency3.type=UsesDependency
+dependency4.from=MyWorld
+dependency4.to=Ball
+dependency4.type=UsesDependency
+dependency5.from=MyWorld
+dependency5.to=Brick
+dependency5.type=UsesDependency
+dependency6.from=Ball
+dependency6.to=Brick
+dependency6.type=UsesDependency
+dependency7.from=Ball
+dependency7.to=Platform
+dependency7.type=UsesDependency
+dependency8.from=Brick
+dependency8.to=Ball
+dependency8.type=UsesDependency
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 height=1056
 package.numDependencies=14
 package.numTargets=9
+=======
+height=731
+package.numDependencies=8
+package.numTargets=6
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -76,21 +111,33 @@ target1.width=120
 target1.x=0
 target1.y=0
 target2.height=70
+<<<<<<< HEAD
 target2.name=Ball
+=======
+target2.name=YouWon1World
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target3.height=70
+<<<<<<< HEAD
 target3.name=YouWon1World
+=======
+target3.name=Platform
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
 target4.height=70
+<<<<<<< HEAD
 target4.name=Platform
+=======
+target4.name=Brick
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
@@ -104,12 +151,17 @@ target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=Level1World
+=======
+target6.name=MyWorld
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
+<<<<<<< HEAD
 target7.height=70
 target7.name=PowerUpBlue
 target7.showInterface=false
@@ -136,3 +188,10 @@ width=1936
 world.lastInstantiated=Level1World
 xPosition=0
 yPosition=0
+=======
+version=3.0.0
+width=1332
+world.lastInstantiated=MyWorld
+xPosition=188
+yPosition=30
+>>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
