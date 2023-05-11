@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Brick here.
  * 
@@ -16,6 +16,10 @@ public class Brick extends Actor
     if (getOneIntersectingObject(Ball.class) != null) {
         getWorld().removeObject(this);
     }
+    if (Brick.class == null) {
+    //Greenfoot.transitionToWorld(new YouWon1World());
+}
+
 }
     }
 

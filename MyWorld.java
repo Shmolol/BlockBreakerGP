@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(560, 560, 1); 
+        super(560, 510, 1); 
         int lives = 100;
         
         
@@ -67,5 +67,17 @@ public class MyWorld extends World
         addObject(brick15,518,126);
         platform.setLocation(306,536);
         ball.setLocation(279,482);
+        ball.setLocation(264,461);
+        platform.setLocation(255,479);
+        ball.setLocation(271,456);
+        ball.setLocation(244,448);
+        platform.setLocation(251,497);
+        ball.setLocation(248,451);
+        ball.setLocation(261,449);
+        ball.setLocation(236,454);
+        ball.setLocation(244,461);
+        platform.setLocation(242,491);
+        ball.setLocation(247,456);
+        ball.setLocation(240,449);
     }
 }
