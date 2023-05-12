@@ -12,12 +12,12 @@ public class Ball extends Actor {
     private int SIZE = 30;
 
     public Ball() {
-        GreenfootImage ballImage = new GreenfootImage(SIZE, SIZE);
-        ballImage.setColor(Color.WHITE);
-        ballImage.fillOval(0, 0, SIZE, SIZE);
-        setImage(ballImage);
-        ballImage.setColor(Color.BLACK);
-        ballImage.drawOval(0, 0, SIZE-1, SIZE-1);
+        //GreenfootImage ballImage = new GreenfootImage(SIZE, SIZE);
+        //ballImage.setColor(Color.WHITE);
+        //ballImage.fillOval(0, 0, SIZE, SIZE);
+        //setImage(ballImage);
+        //ballImage.setColor(Color.BLACK);
+        //ballImage.drawOval(0, 0, SIZE-1, SIZE-1);
     }
 
     public void act() {
@@ -27,18 +27,12 @@ public class Ball extends Actor {
 
     private void checkCollision() {
         Actor brick = getOneIntersectingObject(Brick.class);
-<<<<<<< HEAD
         Actor powerUpBlue = getOneIntersectingObject(PowerUpBlue.class);
         if (brick != null) {
             getWorld().removeObject(brick);
             getWorld().removeObject(powerUpBlue);
             dy = -dy;
             Greenfoot.playSound("pop1.wav");
-=======
-        if (brick != null) {
-            getWorld().removeObject(brick);
-            dy = -dy;
->>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
         }
         if (getX() <= 0 || getX() >= getWorld().getWidth() - 1) {
             dx = -dx;
@@ -56,10 +50,6 @@ public class Ball extends Actor {
             dx = (ballCenterX - platformCenterX) / 5;
             dy = -dy;
         }
-<<<<<<< HEAD
-        
-=======
->>>>>>> 66e7276b8923ce033c435bd5446334dbd9645e35
     }
 }
 
