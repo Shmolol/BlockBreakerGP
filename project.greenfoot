@@ -56,8 +56,13 @@ editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=881
+<<<<<<< HEAD
 package.numDependencies=15
 package.numTargets=10
+=======
+package.numDependencies=12
+package.numTargets=9
+>>>>>>> b6758cb62d51125b46f5d370730f8d47e814262f
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -145,5 +150,10 @@ target9.y=0
 version=3.0.0
 width=974
 world.lastInstantiated=Level1World
+<<<<<<< HEAD
 xPosition=684
 yPosition=140
+=======
+xPosition=336
+yPosition=21
+>>>>>>> b6758cb62d51125b46f5d370730f8d47e814262f
