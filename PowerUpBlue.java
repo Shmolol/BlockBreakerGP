@@ -14,8 +14,8 @@ public class PowerUpBlue extends Actor
      */
     public void act()
     {
-        if (getOneIntersectingObject(Ball.class) != null) {
-        getWorld().removeObject(this);
-    }
+        //if (getOneIntersectingObject(Ball.class) != null) {
+        //getWorld().removeObject(this);
+        //}
     }
 }

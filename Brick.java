@@ -13,12 +13,12 @@ public class Brick extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
-    if (getOneIntersectingObject(Ball.class) != null) {
-        getWorld().removeObject(this);
-    }
-    if (Brick.class == null) {
+    //if (getOneIntersectingObject(Ball.class) != null) {
+        //getWorld().removeObject(this);
+    //}
+    //if (Brick.class == null) {
         //Greenfoot.transitionToWorld(new YouWon1World());
-    }
+    //}
 
 }
     }

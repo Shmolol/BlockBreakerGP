@@ -16,11 +16,11 @@ public class Platform extends Actor
     public static final int HEIGHT = 10;
     
     public void act() {
-    if (Greenfoot.isKeyDown("left")) {
+        if (Greenfoot.isKeyDown("left")) {
         move(-6);
-    }
-    if (Greenfoot.isKeyDown("right")) {
+        }
+        if (Greenfoot.isKeyDown("right")) {
         move(6);
+        }
     }
-}
 }
