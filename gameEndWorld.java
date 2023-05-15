@@ -25,9 +25,9 @@ public class gameEndWorld extends World
         //if (getObjects(Brick.class).isEmpty()) {
         //showText("You Win!", getWidth() / 2, getHeight() / 2);
         //Greenfoot.stop();
-        if (Ball.isGameLost()){
-            showText("Game Over", getWidth() / 2, getHeight() / 2);
-        }
+        
+        showText("Game Over", getWidth() / 2, getHeight() / 2);
+        
         //if (getObjects(Ball.class).isEmpty()) {
         //lives--;
         //if (lives > 0) {

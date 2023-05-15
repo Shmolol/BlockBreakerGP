@@ -18,19 +18,22 @@ public class Ball extends Actor {
         //setImage(ballImage);
         //ballImage.setColor(Color.BLACK);
         //ballImage.drawOval(0, 0, SIZE-1, SIZE-1);
-        lifeCount = 3;
+        setLifeCount(3);
     }
     public Ball(int x, int y) {
         setLocation(x,y);
     }
+    
     public void act() {
         setLocation(getX() + dx, getY() + dy);
         checkCollision();
         if(isGameLost()){
             transitionToGameEndWorld();    
         }
+        if(isGameWon()) {
+            transitionToYouWonWorld();
+        }
     }
-
     private void checkCollision() {
         Actor brick = getOneIntersectingObject(Brick.class);
         Actor powerUpBlue = getOneIntersectingObject(PowerUpBlue.class);
@@ -56,9 +59,10 @@ public class Ball extends Actor {
         if (platform != null) {
             int platformCenterX = platform.getX() + (Platform.WIDTH / 2);
             int ballCenterX = getX() + (SIZE / 2);
-            dx = (ballCenterX - platformCenterX) / 5;
+            dx = (ballCenterX - platformCenterX) / 12;
             dy = -dy;
         }
+        showLives();
     }
     public void checkLifeCount() {
          if (this.getY() >= getWorld().getHeight() - 1) {
@@ -67,7 +71,17 @@ public class Ball extends Actor {
              dy = -5;
          }
     }
-    public static boolean isGameLost() {
+    public boolean isGameWon() {
+        World currentWorld = getWorld();
+        if (currentWorld.getObjects(Brick.class).isEmpty() &&
+            currentWorld.getObjects(PowerUpBlue.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }    
+    }
+    public boolean isGameLost() {
         if (lifeCount <= 0){
             return true;
         }
@@ -75,13 +89,28 @@ public class Ball extends Actor {
             return false;
         }
     }
-    
+    public void transitionToYouWonWorld(){
+        World currentLevel = this.getWorld();
+        currentLevel.stopped();
+        World YouWonWorld1 = new YouWonWorld1();
+        YouWonWorld1.started();
+        Greenfoot.setWorld(YouWonWorld1);
+    }
     public void transitionToGameEndWorld(){
         World currentLevel = this.getWorld();
         currentLevel.stopped();
         World gameEndWorld = new gameEndWorld();
         gameEndWorld.started();
         Greenfoot.setWorld(gameEndWorld);
+    }
+    public void showLives() {
+        getWorld().showText(""+this.getLifeCount(),80, 490);
+    }
+    public void setLifeCount(int lives) {
+        this.lifeCount = lives;
+    }
+    public int getLifeCount() {
+        return lifeCount;
     }
 }
 

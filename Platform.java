@@ -17,10 +17,10 @@ public class Platform extends Actor
     
     public void act() {
         if (Greenfoot.isKeyDown("left")) {
-        move(-6);
+            move(-6);
         }
         if (Greenfoot.isKeyDown("right")) {
-        move(6);
+            move(6);
         }
     }
 }
