@@ -17,8 +17,8 @@ public class Brick extends Actor
         getWorld().removeObject(this);
     }
     if (Brick.class == null) {
-    //Greenfoot.transitionToWorld(new YouWon1World());
-}
+        //Greenfoot.transitionToWorld(new YouWon1World());
+    }
 
 }
     }

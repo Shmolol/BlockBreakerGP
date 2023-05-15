@@ -16,29 +16,30 @@ public class gameEndWorld extends World
     public gameEndWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        
+        super(540, 510, 1); 
+        checkGameOver();
     }
-    
-    
+
     private void checkGameOver() {
-        int lives = 3;
-    if (getObjects(Brick.class).isEmpty()) {
-        showText("You Win!", getWidth() / 2, getHeight() / 2);
-        Greenfoot.stop();
-    }
-    if (getObjects(Ball.class).isEmpty()) {
-        lives--;
-        if (lives > 0) {
-            showText("Lives: " + lives, getWidth() - 50, getHeight() - 20);
-            addObject(new Ball(), getWidth() / 2, getHeight() / 2);
-        } else {
+        //int lives = 3;
+        //if (getObjects(Brick.class).isEmpty()) {
+        //showText("You Win!", getWidth() / 2, getHeight() / 2);
+        //Greenfoot.stop();
+        if (Ball.isGameLost()){
             showText("Game Over", getWidth() / 2, getHeight() / 2);
-            Greenfoot.stop();
         }
+        //if (getObjects(Ball.class).isEmpty()) {
+        //lives--;
+        //if (lives > 0) {
+        //    showText("Lives: " + lives, getWidth() - 50, getHeight() - 20);
+        //    addObject(new Ball(), getWidth() / 2, getHeight() / 2);
+        //} else {
+        //    showText("Game Over", getWidth() / 2, getHeight() / 2);
+        //    Greenfoot.stop();
+        //}
+        //}
+        //}
     }
-    
-}
 }
 
 
