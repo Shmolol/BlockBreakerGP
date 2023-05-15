@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1World extends World
 {
-
+    
+    private GreenfootSound gameMusic;
+    
     /**
      * Constructor for objects of class Level1World.
      * 
@@ -17,6 +19,7 @@ public class Level1World extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(540, 510, 1); 
+        gameMusic = new GreenfootSound("enchanted tiki 86.mp3");
         showText("Lives: ",40, 490);
         prepare();
     }
@@ -82,5 +85,12 @@ public class Level1World extends World
         addObject(brick22,375,190);
         Brick brick23 = new Brick();
         addObject(brick23,480,190);
+    }
+    public void started(){
+        gameMusic.playLoop();
+    }
+    
+    public void stopped(){
+        gameMusic.stop();
     }
 }

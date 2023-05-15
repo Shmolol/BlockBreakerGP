@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TutorialWorld extends World
 {
+    
+    private GreenfootSound gameMusic;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,7 +22,7 @@ public class TutorialWorld extends World
         super(540, 510, 1); 
         int lives = 100;
         
-        
+        gameMusic = new GreenfootSound("Acrostics [Finished].mp3");
         prepare();
     }
     
@@ -79,5 +82,12 @@ public class TutorialWorld extends World
         platform.setLocation(242,491);
         ball.setLocation(247,456);
         ball.setLocation(240,449);
+    }
+    public void started(){
+        gameMusic.playLoop();
+    }
+    
+    public void stopped(){
+        gameMusic.stop();
     }
 }
