@@ -12,16 +12,7 @@ public class Ball extends Actor {
     private int SIZE = 30;
     public static int lifeCount;
     public Ball() {
-        //GreenfootImage ballImage = new GreenfootImage(SIZE, SIZE);
-        //ballImage.setColor(Color.WHITE);
-        //ballImage.fillOval(0, 0, SIZE, SIZE);
-        //setImage(ballImage);
-        //ballImage.setColor(Color.BLACK);
-        //ballImage.drawOval(0, 0, SIZE-1, SIZE-1);
         setLifeCount(3);
-    }
-    public Ball(int x, int y) {
-        setLocation(x,y);
     }
     
     public void act() {

@@ -16,7 +16,8 @@ public class LastBossWorld extends World
     public LastBossWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(540, 510, 1); 
+        super(540, 510, 1);
+        showText("Lives: ",40, 490);
         prepare();
     }
     
@@ -27,9 +28,9 @@ public class LastBossWorld extends World
     private void prepare()
     {
         Platform platform = new Platform();
-        addObject(platform,268,472);
+        addObject(platform,280,475);
         Ball ball = new Ball();
-        addObject(ball,268,428);
+        addObject(ball,280,430);
         Brick brick = new Brick();
         addObject(brick,60,30);
         Brick brick2 = new Brick();

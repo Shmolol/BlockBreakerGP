@@ -4,8 +4,11 @@ class.Brick.image=Bricks.png
 class.LastBossWorld.image=LastBossWorld.png
 class.Level1World.image=Level1World.png
 class.Level2World.image=Level2World.png
+<<<<<<< HEAD
 class.Option1.image=Option1_Button.png
 class.Option2.image=Option2_Button.png
+=======
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 class.Platform.image=Platform.png
 class.PowerUpBlue.image=PowerUpBlue.png
 class.YouWonWorld1.image=YouWon1.jpg
@@ -43,13 +46,18 @@ dependency18.type=UsesDependency
 dependency19.from=Ball
 dependency19.to=Platform
 dependency19.type=UsesDependency
+<<<<<<< HEAD
 dependency2.from=Level2World
+=======
+dependency2.from=TutorialWorld
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 dependency2.to=Ball
 dependency2.type=UsesDependency
 dependency3.from=Level2World
 dependency3.to=PowerUpBlue
 dependency3.type=UsesDependency
 dependency4.from=Level2World
+<<<<<<< HEAD
 dependency4.to=Brick
 dependency4.type=UsesDependency
 dependency5.from=TutorialWorld
@@ -59,6 +67,17 @@ dependency6.from=TutorialWorld
 dependency6.to=Ball
 dependency6.type=UsesDependency
 dependency7.from=TutorialWorld
+=======
+dependency4.to=Platform
+dependency4.type=UsesDependency
+dependency5.from=Level2World
+dependency5.to=Ball
+dependency5.type=UsesDependency
+dependency6.from=Level2World
+dependency6.to=PowerUpBlue
+dependency6.type=UsesDependency
+dependency7.from=Level2World
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 dependency7.to=Brick
 dependency7.type=UsesDependency
 dependency8.from=LastBossWorld
@@ -67,6 +86,7 @@ dependency8.type=UsesDependency
 dependency9.from=LastBossWorld
 dependency9.to=Ball
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=360
@@ -74,6 +94,15 @@ editor.fx.0.y=26
 height=736
 package.numDependencies=19
 package.numTargets=13
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=1005
+editor.fx.0.y=176
+height=736
+package.numDependencies=19
+package.numTargets=10
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -145,14 +174,22 @@ target4.width=120
 target4.x=0
 target4.y=0
 target5.height=70
+<<<<<<< HEAD
 target5.name=Platform
+=======
+target5.name=TutorialWorld
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=LastBossWorld
+=======
+target6.name=Level2World
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
@@ -181,6 +218,12 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=974
+<<<<<<< HEAD
 world.lastInstantiated=LastBossWorld
 xPosition=508
 yPosition=21
+=======
+world.lastInstantiated=Level2World
+xPosition=42
+yPosition=178
+>>>>>>> d44c41c78cfc24935d1b6482abcaea134bd94814
