@@ -18,12 +18,19 @@ public class Option1 extends Actor
             setImage("Option1_Button_Highlighted.png");
         }
         if(Greenfoot.mouseMoved(getWorld())){
-            setImage("Option_Button.png");
+            setImage("Option1_Button.png");
         }
         if(Greenfoot.mouseClicked(this)){
-            Display display = new Display();
-            getWorld().addObject(display, 280, 500);
-            display.setImage(new GreenfootImage("You have selected Play", 35, Color.WHITE, Color.BLACK, Color.YELLOW));
+            transitionToWorld1();
         }
+    }
+    public void transitionToWorld1(){
+        World currentLevel = getWorld();
+        currentLevel.stopped();
+        Greenfoot.stop();
+        World Level1World = new Level1World();
+        Greenfoot.setWorld(Level1World);
+        Level1World.started();
+        Greenfoot.start();
     }
 }

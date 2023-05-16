@@ -12,7 +12,7 @@ public class Platform extends Actor
      * Act - do whatever the Plateform wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public static int WIDTH = 70;
+    public static int WIDTH = 80;
     public static int HEIGHT = 10;
     
     public void act() {

@@ -26,10 +26,16 @@ public class Option2 extends Actor
 
         if (Greenfoot.mouseClicked(this))
         {
-
-            Display display = new Display();
-            getWorld().addObject(display , 280, 500);
-            display.setImage(new GreenfootImage("You have selected Tutorial ", 35, Color.WHITE, Color.BLACK, Color.YELLOW));
+            transitionToTutorial();
         }
+    }
+    public void transitionToTutorial(){
+        World currentLevel = getWorld();
+        currentLevel.stopped();
+        Greenfoot.stop();
+        World TutorialWorld = new TutorialWorld();
+        Greenfoot.setWorld(TutorialWorld);
+        TutorialWorld.started();
+        Greenfoot.start();
     }
 }

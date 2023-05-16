@@ -20,8 +20,8 @@ public class TutorialWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(540, 510, 1); 
-        int lives = 100;
-        
+        showText("Lives: ",40, 490);
+        showText("Move with left and right arrow keys", 350,490);
         gameMusic = new GreenfootSound("Acrostics [Finished].mp3");
         prepare();
     }
@@ -35,7 +35,7 @@ public class TutorialWorld extends World
         Platform platform = new Platform();
         addObject(platform,275,385);
         platform.setLocation(280,372);
-        Ball ball = new Ball();
+        Ball ball = new Ball(10);
         addObject(ball,284,316);
         ball.setLocation(280,341);
         Brick brick = new Brick();
@@ -89,5 +89,27 @@ public class TutorialWorld extends World
     
     public void stopped(){
         gameMusic.stop();
+    }
+    public void act() {
+        transitionToMainScreen();
+    }
+    public void transitionToMainScreen(){
+        if(isGameWon()) {
+            stopped();
+            Greenfoot.stop();
+            World MainScreen = new MainScreen();
+            Greenfoot.setWorld(MainScreen);
+            MainScreen.started();
+            Greenfoot.start();
+        }
+    }
+    public boolean isGameWon() {
+        if (getObjects(Brick.class).isEmpty() &&
+            getObjects(PowerUpBlue.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }    
     }
 }

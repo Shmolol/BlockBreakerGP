@@ -14,7 +14,9 @@ public class Ball extends Actor {
     public Ball() {
         setLifeCount(3);
     }
-    
+    public Ball(int lives) {
+        setLifeCount(lives);
+    }
     public void act() {
         setLocation(getX() + dx, getY() + dy);
         checkCollision();
@@ -59,16 +61,7 @@ public class Ball extends Actor {
              dy = -5;
          }
     }
-    //public boolean isGameWon() {
-        //World currentWorld = getWorld();
-        //if (currentWorld.getObjects(Brick.class).isEmpty() &&
-           // currentWorld.getObjects(PowerUpBlue.class).isEmpty()) {
-            //return true;
-        //}
-        //else {
-            //return false;
-        //}    
-    //}
+    
     public boolean isGameLost() {
         if (lifeCount <= 0){
             return true;
@@ -77,15 +70,9 @@ public class Ball extends Actor {
             return false;
         }
     }
-    //public void transitionToYouWonWorld(){
-        //World currentLevel = this.getWorld();
-        //currentLevel.stopped();
-        //World YouWonWorld1 = new YouWonWorld1();
-        //YouWonWorld1.started();
-        //Greenfoot.setWorld(YouWonWorld1);
-    //}
+   
     public void transitionToGameEndWorld(){
-        World currentLevel = this.getWorld();
+        World currentLevel = getWorld();
         currentLevel.stopped();
         World gameEndWorld = new gameEndWorld();
         gameEndWorld.started();

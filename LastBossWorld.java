@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LastBossWorld extends World
 {
 
+    private GreenfootSound gameMusic;
+    
     /**
      * Constructor for objects of class LastBossWorld.
      * 
@@ -17,6 +19,7 @@ public class LastBossWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(540, 510, 1);
+        gameMusic = new GreenfootSound("Fight in the Dungeon.mp3");
         showText("Lives: ",40, 490);
         prepare();
     }
@@ -111,5 +114,33 @@ public class LastBossWorld extends World
         addObject(brick39,376,315);
         Brick brick40 = new Brick();
         addObject(brick40,480,315);
+    }
+    public void started(){
+        gameMusic.playLoop();
+    }
+    public void stopped(){
+        gameMusic.stop();
+    }
+    public void act() {
+        transitionToWorldWin();
+    }
+    public void transitionToWorldWin(){
+        if(isGameWon()) {
+            stopped();
+            Greenfoot.stop();
+            World YouWonWorld1 = new YouWonWorld1();
+            Greenfoot.setWorld(YouWonWorld1);
+            YouWonWorld1.started();
+            Greenfoot.start();
+        }
+    }
+    public boolean isGameWon() {
+        if (getObjects(Brick.class).isEmpty() &&
+            getObjects(PowerUpBlue.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }    
     }
 }
