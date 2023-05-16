@@ -21,9 +21,6 @@ public class Ball extends Actor {
         if(isGameLost()){
             transitionToGameEndWorld();    
         }
-        if(isGameWon()) {
-            transitionToYouWonWorld();
-        }
     }
     private void checkCollision() {
         Actor brick = getOneIntersectingObject(Brick.class);
@@ -62,16 +59,16 @@ public class Ball extends Actor {
              dy = -5;
          }
     }
-    public boolean isGameWon() {
-        World currentWorld = getWorld();
-        if (currentWorld.getObjects(Brick.class).isEmpty() &&
-            currentWorld.getObjects(PowerUpBlue.class).isEmpty()) {
-            return true;
-        }
-        else {
-            return false;
-        }    
-    }
+    //public boolean isGameWon() {
+        //World currentWorld = getWorld();
+        //if (currentWorld.getObjects(Brick.class).isEmpty() &&
+           // currentWorld.getObjects(PowerUpBlue.class).isEmpty()) {
+            //return true;
+        //}
+        //else {
+            //return false;
+        //}    
+    //}
     public boolean isGameLost() {
         if (lifeCount <= 0){
             return true;
@@ -80,13 +77,13 @@ public class Ball extends Actor {
             return false;
         }
     }
-    public void transitionToYouWonWorld(){
-        World currentLevel = this.getWorld();
-        currentLevel.stopped();
-        World YouWonWorld1 = new YouWonWorld1();
-        YouWonWorld1.started();
-        Greenfoot.setWorld(YouWonWorld1);
-    }
+    //public void transitionToYouWonWorld(){
+        //World currentLevel = this.getWorld();
+        //currentLevel.stopped();
+        //World YouWonWorld1 = new YouWonWorld1();
+        //YouWonWorld1.started();
+        //Greenfoot.setWorld(YouWonWorld1);
+    //}
     public void transitionToGameEndWorld(){
         World currentLevel = this.getWorld();
         currentLevel.stopped();

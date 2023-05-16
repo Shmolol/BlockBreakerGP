@@ -86,11 +86,34 @@ public class Level1World extends World
         Brick brick23 = new Brick();
         addObject(brick23,480,190);
     }
+    // Music methods
     public void started(){
         gameMusic.playLoop();
     }
-    
     public void stopped(){
         gameMusic.stop();
+    }
+    
+    // Transition methods
+    public void act() {
+        transitionToWorld2();
+    }
+    public void transitionToWorld2(){
+        if(isGameWon()) {
+            stopped();
+            Greenfoot.stop();
+            World Level2World = new Level2World();
+            Greenfoot.setWorld(Level2World);
+            Greenfoot.start();
+        }
+    }
+    public boolean isGameWon() {
+        if (getObjects(Brick.class).isEmpty() &&
+            getObjects(PowerUpBlue.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }    
     }
 }
