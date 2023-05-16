@@ -28,9 +28,9 @@ public class LastBossWorld extends World
     private void prepare()
     {
         Platform platform = new Platform();
-        addObject(platform,268,472);
+        addObject(platform,280,475);
         Ball ball = new Ball();
-        addObject(ball,268,428);
+        addObject(ball,280,430);
         Brick brick = new Brick();
         addObject(brick,60,30);
         Brick brick2 = new Brick();
